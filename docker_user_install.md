@@ -41,3 +41,16 @@ I ran out of space on an Ubuntu and had to do the following:
 
 See: [https://docs.docker.com/config/daemon/systemd/#runtime-directory-and-storage-driver](https://tienbm90.medium.com/how-to-change-docker-root-data-directory-89a39be1a70b)
 
+4. Run AGX NX images
+```
+cat nx | sudo docker import - nx_image:v1
+```
+```
+sudo docker save nx_image:v1 > nx_save_images.tar
+```
+```
+sudo docker run -it nx_image:v1 /usr/bin/entry.sh bash
+```
+```
+sudo docker run --rm -ti --net=host -e DISPLAY=:0 f84cb183d84b /usr/bin/entry.sh bash
+```
