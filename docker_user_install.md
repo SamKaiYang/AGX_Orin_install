@@ -35,7 +35,7 @@ docker run -it <image_names> /bin/sh
 docker run -it --rm -e DISPLAY --net=host -v $XAUTHORITY:/root/.Xauthority -v /tmp/.X11-unix:/tmp/.X11-unix debian:11-slim <image_names> /bin/sh
 ```
 
-3. Change vo
+3. Change the default data folder of docker images, containers, etc to a different path. 
 
 I ran out of space on an Ubuntu and had to do the following:
 Stop the docker service
