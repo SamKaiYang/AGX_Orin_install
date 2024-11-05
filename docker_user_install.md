@@ -38,27 +38,6 @@ docker run -it --rm -e DISPLAY --net=host -v $XAUTHORITY:/root/.Xauthority -v /t
 3. Change the default data folder of docker images, containers, etc to a different path. 
 
 I ran out of space on an Ubuntu and had to do the following:
-Stop the docker service
-```
-sudo systemctl stop docker.service
-sudo systemctl stop docker.socket
-```
-Copy /var/lib/docker to new volume
-```
-sudo rsync -aqxP /var/lib/docker/ /media/username/spare\ disk/
-```
-Update /etc/docker/daemon.json
-```
-{
-"data-root": "/media/username/spare disk/docker",
-"storage-driver": "overlay2"
-}
-```
-Reload systemd and start docker service
-```
-sudo systemctl daemon-reload
-sudo systemctl start docker
-```
 
-See: https://docs.docker.com/config/daemon/systemd/#runtime-directory-and-storage-driver
+See: [https://docs.docker.com/config/daemon/systemd/#runtime-directory-and-storage-driver](https://tienbm90.medium.com/how-to-change-docker-root-data-directory-89a39be1a70b)
 
