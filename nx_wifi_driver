@@ -1,0 +1,8 @@
+git clone https://github.com/morrownr/8821cu-20210916
+cd 8821cu-20210916
+make clean
+make -j$(nproc)
+sudo make install
+sudo reboot
+
+done.
