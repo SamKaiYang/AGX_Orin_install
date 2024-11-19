@@ -1,0 +1,13 @@
+## System requirements and installation
+Whether you're running locally or in the cloud, you'll need to install:
+1. Ubuntu 22.04
+2. Nvidia Isaac Sim 4.2
+3. Nvidia Orbit 0.3.0
+4. Ros2 Humble
+```
+# Execute in ubuntu terminal:
+git clone https://github.com/isaac-sim/IsaacLab.git
+export ISAACSIM_PATH="${HOME}/.local/share/ov/pkg/isaac-sim-2023.1.1"
+export ISAACSIM_PYTHON_EXE="${ISAACSIM_PATH}/python.sh"
+# and also put it inside .bashrc file
+```
