@@ -30,6 +30,7 @@ source /opt/ros/$ROS_DISTRO/setup.bash
 sudo apt install python3-rosdep2
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
+sudo apt install python3-colcon-common-extensions
 colcon build
 ```
 
