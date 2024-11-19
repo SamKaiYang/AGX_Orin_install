@@ -27,6 +27,8 @@ Pay attention to any error messages. If `pip install` does not complete cleanly,
 Build `go2_ros_sdk`. You need to have `ros2` and `rosdep` installed. If you do not, follow these [instructions](https://docs.ros.org/en/humble/Installation.html). Then:
 ```shell
 source /opt/ros/$ROS_DISTRO/setup.bash
+sudo apt install python3-rosdep2
+rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 colcon build
 ```
