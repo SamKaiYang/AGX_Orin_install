@@ -18,6 +18,19 @@ sudo apt install ros-$ROS_DISTRO-vision-msgs
 
 sudo apt install python3-pip clang portaudio19-dev
 cd src
+```
+# fixed requirements.txt --> #open3d
+aiortc
+aiohttp
+paho-mqtt
+python-dotenv
+wasmtime
+#open3d
+torch
+torchvision
+pycryptodome
+opencv-python
+```shell
 pip install -r requirements.txt
 sudo apt install python3-open3d
 cd ..
